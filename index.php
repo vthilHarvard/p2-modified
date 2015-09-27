@@ -1,8 +1,3 @@
-<?php
-error_reporting(-1); # Report all PHP errors
-ini_set('display_errors', 1);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,10 +21,9 @@ ini_set('display_errors', 1);
 		<br/><br/>
 	<form class="form-horizontal form_prop" method='POST' action='index.php'>
 		<div class="form-group">
-			<label for="word_count" class="col-sm-2 control-label">Number of words</label>
-			<input id="word_count" type="number" size="6" name="word_count" min="2" max="5"
+			<label for="word_count" class="col-sm-2 control-label">Number of words(2-5)</label>
+			<input id="word_count" type="number" size="6" name="word_count" min="2" max="5" title="Number in the range 2-5"
 			value="<?php echo (isset($_POST['word_count']) ? $_POST['word_count'] : 2); ?>" />
-
 		</div>
 		<div class="form-group">
 				<label for="special_char" class="col-sm-2 control-label">Add Special character</label>
